@@ -5,26 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UI_Graph"
         mc:Ignorable="d"
-        Title="" Height="450" Width="800">
-    <Border Background="#de7600"
+        Title="Graph" Height="450" Width="800"
+        WindowStyle="None"
+        Background="Transparent"
+        AllowsTransparency="True"
+        ResizeMode="NoResize">
+    <Border Background="#251931"
             CornerRadius="20">
         
-        <Grid>
+        <Grid Margin="10,10,20,40">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
-                <RowDefinition/>
+                <RowDefinition />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="150"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-
-            <TextBox Background="#de7600" Grid.Row="0" Grid.Column="0" Text="Graph" FontSize="30" Margin="10,0,0,0"/>
-            <StackPanel  Grid.Row="1" Grid.Column="0">
-                <RadioButton x:Name="Button1" Content="Namme" Style="{StaticResource StyleMenuButton}"/>
-                <RadioButton x:Name="Button2" Content="N2" Style="{StaticResource StyleMenuButton}"/>
-            </StackPanel>
             
+            
+            <StackPanel  Grid.Row="1" Grid.Column="0">
+                <RadioButton x:Name="Button1" Content="Ввод данных" Style="{StaticResource StyleMenuButton}"/>
+                <RadioButton x:Name="Button2" Content="Смежность" Style="{StaticResource StyleMenuButton}"/>
+                <RadioButton x:Name="Button3" Content="Обход" Style="{StaticResource StyleMenuButton}"/>
+            </StackPanel>
+            <Border Background="Transparent"
+                    CornerRadius="15"
+                    Grid.Row="1" 
+                    Grid.Column="1">
+                
+            </Border>
+
         </Grid>
     </Border>
     

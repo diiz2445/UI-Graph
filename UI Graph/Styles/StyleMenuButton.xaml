@@ -7,22 +7,24 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="RadioButton">
-                        <Grid HorizontalAlignment="Center"
+                        <Grid HorizontalAlignment="Stretch"
                               Background="{TemplateBinding Background}"
                               VerticalAlignment="Stretch">
 
-                            <TextBlock Text="{TemplateBinding Property=Content}" VerticalAlignment="Center"></TextBlock>
+                            <TextBlock Text="{TemplateBinding Property=Content}" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
                         </Grid>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Foreground" Value="#EAECEE"/>
+            <Setter Property="FontSize" Value="22"/>
         </Style.Setters>
         
         <Style.Triggers>
             <Trigger Property="IsChecked" Value="True">
-                <Setter Property="Background" Value="#f5f178"/>
+                <Setter Property="Background" Value="#250B42"/>
             </Trigger>
         </Style.Triggers>
         
