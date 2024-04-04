@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:UI_Graph"
         mc:Ignorable="d"
         Title="" Height="450" Width="800">
-    <Border Background="#de7600">
+    <Border Background="#de7600"
+            CornerRadius="20">
         
         <Grid>
             <Grid.RowDefinitions>
@@ -20,10 +21,16 @@
 
             <TextBox Background="#de7600" Grid.Row="0" Grid.Column="0" Text="Graph" FontSize="30" Margin="10,0,0,0"/>
             <StackPanel  Grid.Row="1" Grid.Column="0">
-                <Button x:Name="Button1" Content="Namme"></Button>
-                <Button x:Name="Button2" Content="N2"/>
+                <RadioButton x:Name="Button1" Content="Namme" Style="{StaticResource StyleMenuButton}"/>
+                <RadioButton x:Name="Button2" Content="N2" Style="{StaticResource StyleMenuButton}"/>
             </StackPanel>
-            <></>
+            
         </Grid>
     </Border>
+    
+        
+        
+    
 </Window>
+
+
