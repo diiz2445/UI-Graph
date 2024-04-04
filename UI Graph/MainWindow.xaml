@@ -1,0 +1,29 @@
+﻿<Window x:Class="UI_Graph.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI_Graph"
+        mc:Ignorable="d"
+        Title="" Height="450" Width="800">
+    <Border Background="#de7600">
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <TextBox Background="#de7600" Grid.Row="0" Grid.Column="0" Text="Graph" FontSize="30" Margin="10,0,0,0"/>
+            <StackPanel  Grid.Row="1" Grid.Column="0">
+                <Button x:Name="Button1" Content="Namme"></Button>
+                <Button x:Name="Button2" Content="N2"/>
+            </StackPanel>
+            <></>
+        </Grid>
+    </Border>
+</Window>
