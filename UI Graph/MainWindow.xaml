@@ -4,16 +4,22 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UI_Graph"
+        xmlns:viewModel="clr-namespace:UI_Graph.ViewModel"
+        xmlns:view="clr-namespace:UI_Graph.View"
         mc:Ignorable="d"
-        Title="Graph" Height="450" Width="800"
+        Title="Graph" Height="600" Width="900"
         WindowStyle="None"
         Background="Transparent"
         AllowsTransparency="True"
         ResizeMode="NoResize">
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
+    
     <Border Background="#251931"
             CornerRadius="20">
         
-        <Grid Margin="10,10,20,40">
+        <Grid Margin="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
                 <RowDefinition />
@@ -25,9 +31,9 @@
             
             
             <StackPanel  Grid.Row="1" Grid.Column="0">
-                <RadioButton x:Name="Button1" Content="Ввод данных" Style="{StaticResource StyleMenuButton}"/>
-                <RadioButton x:Name="Button2" Content="Смежность" Style="{StaticResource StyleMenuButton}"/>
-                <RadioButton x:Name="Button3" Content="Обход" Style="{StaticResource StyleMenuButton}"/>
+                <RadioButton Height="50" x:Name="Button1" Content="Ввод данных" Style="{StaticResource StyleMenuButton}" IsChecked="True" Command="{Binding HomeViewCommand}"/>
+                <RadioButton Height="50" x:Name="Button2" Content="Смежность" Style="{StaticResource StyleMenuButton}" Command="{Binding SmejnViewCommand}"/>
+                <RadioButton Height="50" x:Name="Button3" Content="Обход" Style="{StaticResource StyleMenuButton}"/>
             </StackPanel>
             <Border Background="Transparent"
                     CornerRadius="15"
@@ -35,6 +41,12 @@
                     Grid.Column="1">
                 
             </Border>
+            <ContentControl Grid.Column="1"
+                            Grid.Row="1"
+                            Margin="10"
+                            Content="{Binding  CurrentView}">
+                
+            </ContentControl>
 
         </Grid>
     </Border>
