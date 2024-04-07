@@ -2,12 +2,19 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:UI_Graph"
+             xmlns:viewModel="clr-namespace:UI_Graph.ViewModel"
+             xmlns:view="clr-namespace:UI_Graph.View"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/Styles/StyleMenuButton.xaml"/>
+                <ResourceDictionary Source="/Styles/CountRowAndColMatrixStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
+                <view:HomeView/>
+            </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
