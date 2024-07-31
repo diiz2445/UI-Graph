@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Проект1
+namespace UI_Graph.Core
 {
     class GraphLogic
     {

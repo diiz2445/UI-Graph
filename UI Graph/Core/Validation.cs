@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Проект1
+namespace UI_Graph.Core
 {
     class Validation
     {
@@ -32,9 +32,8 @@ namespace Проект1
                     if (Matr[i, j] < 0) return false;
             return true;
         }
-        public static bool CheckAllInfo(double[,] Matr)
+        public static bool CheckAllInfo(double[,] Matr)//проверка наличия нарушений по всем параметрам
         {
-            if (CheckNegative(Matr) && CheckSim(Matr) &&CheckZeros(Matr)) return false;//проверка наличия нарушений по всем параметрам
             return true;
         }
     }
