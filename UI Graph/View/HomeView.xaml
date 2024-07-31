@@ -13,9 +13,11 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <TextBox Style="{StaticResource CountTextboxStyle}">
-
-                </TextBox>
+                <StackPanel>
+                    <TextBox VerticalAlignment="Top" HorizontalAlignment="Left" Style="{StaticResource CountTextboxStyle}"/>
+                    <Button Content="click me" Height="20" Width="80" HorizontalAlignment="Left" VerticalAlignment="Top" Command=""/>
+                </StackPanel>
+               
             </Grid>
             
         </Border>

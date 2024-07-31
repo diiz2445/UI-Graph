@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace UI_Graph.Core
 {
-    class ObservableObject : INotifyPropertyChanged//класс для реализации интерфейса, чтобы обрабатывать изменения(по сути нажатия кнопок)
+    class ObservableObject : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler? PropertyChanged;
         
